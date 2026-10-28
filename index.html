@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0d1b2f">
   <meta name="robots" content="noindex,nofollow">
-  <title>68 Property | Sổ tay đăng tin 08:00–17:00 | Team Phát Tài</title>
-  <meta name="description" content="Sổ tay bán hàng 08:00–17:00 của Team Phát Tài: thông tin Lộc Khương, Hòa Phú, Ngọc Khương; bài đăng cá nhân hóa, lịch làm việc, tư vấn và checklist.">
+  <title>68 Property | Sổ tay bán hàng dễ làm | Team Phát Tài</title>
+  <meta name="description" content="Hướng dẫn đơn giản cho nhân viên mới 68 Property: chọn dự án, soạn tin riêng, trả lời khách, tra cứu 15 câu hỏi thường gặp và báo cáo trước 17:00.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="68 Property | Sổ tay triển khai chiến dịch 28/10–01/11/2026">
-  <meta property="og:description" content="Kế hoạch từ 08:00 đến 17:00, mẫu đăng Facebook và Zalo cá nhân hóa theo dự án, tư vấn khách và checklist cho Team Phát Tài.">
+  <meta property="og:description" content="Sổ tay nhân viên: lịch làm việc 08:00–17:00, mẫu tin theo từng dự án và câu trả lời nhanh cho khách hàng.">
   <style>
   :root{--navy:#0e1e32;--navy2:#172b45;--gold:#e6ad56;--cream:#f7f6f2;--paper:#fff;--ink:#182b42;--muted:#617084;--line:#e5e9ef;--green:#247f61}
   *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:14px;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #e7a547;outline-offset:2px}h1,h2,h3{line-height:1.2;letter-spacing:-.03em;margin-top:0}h2{font-size:clamp(25px,3.4vw,38px)}h3{font-size:18px}p{margin:0 0 14px}.wrap{width:min(1150px,calc(100% - 42px));margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:800;color:#b07a2a}.small{font-size:12px;color:var(--muted)}
@@ -40,156 +40,220 @@
 .flow.four{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:760px){.personal-layout{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.flow.four{grid-template-columns:repeat(2,minmax(0,1fr))}.personal-panel,.personal-preview{padding:18px}.workday{padding:20px}.stat b{font-size:clamp(19px,4vw,26px)}}
 @media print{.builder-actions,.copy{display:none!important}.personal-layout{display:block}.personal-panel{display:none}}
+
+/* Hỏi đáp: đóng mặc định, bấm để xem câu trả lời */
+.faq-tools{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin:-2px 0 24px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 17px}
+.faq-tools label{font-size:12px;font-weight:800;white-space:nowrap}.faq-tools input{border:1px solid #cbd6e1;border-radius:10px;background:#f8fafc;min-width:170px;flex:1;padding:11px 13px;font-size:13px;color:var(--ink)}.faq-tools p{font-size:11px;color:var(--muted);margin:0}
+.faq-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;align-items:start}.faq-group{min-width:0;background:#fff;border:1px solid var(--line);border-radius:17px;padding:15px}.faq-group h3{margin:4px 6px 14px;font-size:16px}
+.faq-item{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:#fff}.faq-item:last-child{margin-bottom:0}.faq-item[open]{border-color:#d7ba8f;background:#fffdf9}.faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;font-weight:750;padding:13px 12px;line-height:1.55}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary:hover{background:#fff9f0}.faq-item summary:focus-visible{outline:3px solid #e7a547;outline-offset:-3px}.faq-chevron{display:flex;align-items:center;justify-content:center;min-width:23px;height:23px;border-radius:50%;font-weight:700;font-size:16px;color:#906525;background:#f9ecd9;transition:transform .2s}.faq-item[open] .faq-chevron{transform:rotate(180deg)}
+.faq-content{border-top:1px solid #f0e6d8;padding:14px 13px 15px}.faq-content>p:first-child{font-size:12px;line-height:1.8;color:#233852;margin-bottom:11px}.faq-note{font-size:11px;color:#805b2a;background:#fff5e4;border-radius:9px;padding:10px 11px;margin-bottom:12px}.faq-content .copy{font-size:11px}.faq-group[hidden],.faq-item[hidden],#faq-empty[hidden]{display:none!important}#faq-empty{padding:18px;text-align:center;background:#fff;border-radius:12px;color:var(--muted)}
+@media(max-width:940px){.faq-groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:660px){.faq-groups{grid-template-columns:1fr}.faq-tools{align-items:stretch}.faq-tools label{width:100%}.faq-tools input{flex-basis:100%}.faq-group{padding:14px}.faq-item summary{font-size:13px;padding:14px 12px}}
+@media print{.faq-item{break-inside:avoid}.faq-groups{display:block}}
 </style>
 </head>
 <body>
-<header class="header"><div class="wrap headerin"><a href="#dau" class="brand"><span class="mark">68</span><span>68 PROPERTY <small>TEAM PHÁT TÀI</small></span></a><nav class="nav"><a href="#du-an">Dự án</a><a href="#lich">Lịch 08:00–17:00</a><a href="#ca-nhan-hoa">Tạo bài riêng</a><a href="#noi-dung">Mẫu đăng</a><a href="#chuyen-doi">Tư vấn khách</a><a href="#checklist">Checklist</a></nav><a class="btn btn-gold" href="#ca-nhan-hoa">Soạn bài ngay ↗</a></div></header>
+<header class="header"><div class="wrap headerin"><a href="#dau" class="brand"><span class="mark">68</span><span>68 PROPERTY <small>TEAM PHÁT TÀI</small></span></a><nav class="nav"><a href="#du-an">Dự án</a><a href="#lich">Lịch 08:00–17:00</a><a href="#ca-nhan-hoa">Tạo bài</a><a href="#noi-dung">Mẫu đăng</a><a href="#chuyen-doi">Tư vấn</a><a href="#faq">Hỏi đáp</a><a href="#checklist">Checklist</a></nav><a class="btn btn-gold" href="#ca-nhan-hoa">Soạn bài ngay ↗</a></div></header>
 <main id="dau">
-<section class="hero"><div class="wrap hero-content"><span class="pill">TÀI LIỆU MEMBER · 28/10 – 01/11/2026</span><div style="margin-top:23px" class="eyebrow">68 PROPERTY · BẮT TAY XÂY DỰNG ƯỚC MƠ</div><h1>ĐĂNG TIN <em>ĐÚNG KHÁCH</em><br>CHỐT HẸN DỄ HƠN</h1><p class="lead">Làm việc 08:00–17:00. Mỗi member chọn đúng sản phẩm, viết bài theo giọng của mình, đăng đúng kênh và chuyển người quan tâm thành cuộc hẹn cụ thể.</p><div class="hero-actions"><a class="btn btn-gold" href="#ca-nhan-hoa">Tạo bài đăng của tôi ↓</a><a class="btn btn-ghost" href="#lich">Xem lịch 08:00–17:00 ↗</a></div><div class="stats"><div class="stat"><span>Giờ làm việc mỗi ngày</span><b>08:00–17:00</b></div><div class="stat"><span>Nhóm sản phẩm</span><b>03 DỰ ÁN</b></div><div class="stat"><span>Ưu tiên của member</span><b>ĐĂNG · TƯ VẤN</b></div></div><p class="hero-note">Không mặc định giá từ 680 triệu, khoản vay 500 triệu hay công chứng trong 3 tháng cho mọi lô. Chỉ công bố điều kiện đã được leader xác minh và duyệt trước khi đăng.</p><p class="count" id="countdown"></p></div></section>
-<section class="block alt" id="du-an"><div class="wrap"><div class="intro"><span class="eyebrow">01 / DANH MỤC DỰ ÁN</span><h2>3 nhóm hàng – 3 cách tư vấn hiệu quả</h2><p>Thông tin được tổng hợp từ tin đăng nội bộ 15–27/10/2026, hồ sơ SEO 68 Property và nguồn rao trước đây. Mọi mức giá, đường, số lô còn bán và pháp lý phải đối chiếu trước khi công bố.</p></div><div class="grid grid3">
-<article class="card"><span class="tag tag-blue">LỘC KHƯƠNG DOWNTOWN</span><h3>Ưu tiên lựa chọn diện tích và ngân sách</h3><p><b>Khu vực:</b> Hòa Khương, ven Đà Nẵng.</p><p><b>Giới thiệu trước đây:</b> diện tích khoảng 120–150m²; ngang 5–7m; đường khoảng 5–7m. Thông tin 55 nền là quy mô đợt giới thiệu cũ, không phải số nền còn bán.</p><p><b>Giá cũ:</b> 8xx triệu/nền trong giới thiệu trước đây. Không dùng làm giá hiện hành.</p><div class="callout"><b>Điểm chốt khách:</b> đề xuất 2–3 lô theo diện tích và khả năng tài chính, gửi thông tin vị trí và mã lô đã duyệt.</div><a class="btn btn-outline" href="#mau-loc">Sao chép mẫu Lộc Khương ↓</a></article>
-<article class="card"><span class="tag tag-green">HÒA PHÚ</span><h3>Gia đình mua đất để ở, quan tâm vị trí gần trường</h3><p><b>Tin đăng 17–22/10:</b> diện tích 120m², ngang 6m; mô tả đối diện Trường Tiểu học Hòa Phú.</p><p><b>Giá rao trong hồ sơ:</b> 1,45 tỷ/nền. Chưa xác nhận giá mới và còn hàng.</p><p><b>Đường:</b> bản tin có mô tả 7,5m và 10,5m khác nhau, không khẳng định trước khi kiểm tra đúng lô.</p><div class="callout"><b>Điểm chốt khách:</b> mời khách khảo sát trường, đường đi và hiện trạng khu dân cư, kiểm chứng theo vị trí chính xác.</div><a class="btn btn-outline" href="#mau-phu">Sao chép mẫu Hòa Phú ↓</a></article>
-<article class="card"><span class="tag">NGỌC KHƯƠNG BRIENZ</span><h3>Khách ưu tiên không gian sống thoáng</h3><p><b>Tin giới thiệu bên ngoài:</b> khu vực Hòa Khương, trục ĐH8 và Đồng Xanh – Đồng Nghệ.</p><p><b>Diện tích tham khảo:</b> khoảng 120–140m²; ngang một số nền 7–10m; thông tin đường khoảng 5,5m ở tin cũ.</p><p><b>Giá:</b> các nguồn rao cũ khác nhau, chưa có giá hiện hành do 68 Property xác nhận.</p><div class="callout"><b>Điểm chốt khách:</b> gửi vị trí lô, ảnh có sẵn và tài liệu đã kiểm tra; tuyệt đối không đồng nghĩa “gần hồ” với “view hồ”.</div><a class="btn btn-outline" href="#mau-ngoc">Sao chép mẫu Ngọc Khương ↓</a></article>
+<section class="hero"><div class="wrap hero-content"><span class="pill">SỔ TAY DÀNH CHO NHÂN VIÊN · 28/10 – 01/11/2026</span><div style="margin-top:23px" class="eyebrow">68 PROPERTY · BẮT TAY XÂY DỰNG ƯỚC MƠ</div><h1>VIẾT TIN <em>DỄ HIỂU</em><br>TƯ VẤN TỰ TIN HƠN</h1><p class="lead">Làm việc từ 08:00 đến 17:00. Mỗi ngày bạn chỉ cần chọn lô đang bán, viết bài dễ hiểu, đăng Facebook hoặc Zalo, trả lời khách và chốt lịch hẹn.</p><div class="hero-actions"><a class="btn btn-gold" href="#ca-nhan-hoa">Tạo bài đăng của tôi ↓</a><a class="btn btn-ghost" href="#lich">Xem lịch 08:00–17:00 ↗</a></div><div class="stats"><div class="stat"><span>Giờ làm việc mỗi ngày</span><b>08:00–17:00</b></div><div class="stat"><span>Nhóm sản phẩm</span><b>03 DỰ ÁN</b></div><div class="stat"><span>Việc mỗi nhân viên cần làm</span><b>ĐĂNG · TƯ VẤN</b></div></div><p class="hero-note">Đừng áp dụng chung giá từ 680 triệu, hỗ trợ vay đến 500 triệu hoặc công chứng trong 3 tháng cho mọi lô. Hỏi trưởng nhóm trước khi đưa những thông tin này vào bài đăng.</p><p class="count" id="countdown"></p></div></section>
+<section class="block alt" id="du-an"><div class="wrap"><div class="intro"><span class="eyebrow">01 / DANH MỤC DỰ ÁN</span><h2>3 dự án – biết nói gì với từng nhóm khách</h2><p>Đọc điểm nổi bật của từng dự án, rồi chọn đúng lô trong bảng hàng mới nhất. Số liệu bên dưới lấy từ tin cũ nên cần kiểm tra lại trước khi nói với khách.</p></div><div class="grid grid3">
+<article class="card"><span class="tag tag-blue">LỘC KHƯƠNG DOWNTOWN</span><h3>Cho khách muốn chọn lô vừa túi tiền</h3><p><b>Khu vực:</b> Hòa Khương, ven Đà Nẵng.</p><p><b>Giới thiệu trước đây:</b> diện tích khoảng 120–150m²; ngang 5–7m; đường khoảng 5–7m. Thông tin 55 nền là quy mô đợt giới thiệu cũ, không phải số nền còn bán.</p><p><b>Giá cũ:</b> 8xx triệu/nền trong giới thiệu trước đây. Không dùng làm giá hiện hành.</p><div class="callout"><b>Nên tư vấn:</b> đề xuất 2–3 lô theo diện tích và khả năng tài chính, gửi thông tin vị trí và mã lô đã duyệt.</div><a class="btn btn-outline" href="#mau-loc">Sao chép mẫu Lộc Khương ↓</a></article>
+<article class="card"><span class="tag tag-green">HÒA PHÚ</span><h3>Cho gia đình quan tâm trường học</h3><p><b>Tin đăng 17–22/10:</b> diện tích 120m², ngang 6m; mô tả đối diện Trường Tiểu học Hòa Phú.</p><p><b>Giá rao trong hồ sơ:</b> 1,45 tỷ/nền. Chưa xác nhận giá mới và còn hàng.</p><p><b>Đường:</b> bản tin có mô tả 7,5m và 10,5m khác nhau, không khẳng định trước khi kiểm tra đúng lô.</p><div class="callout"><b>Nên tư vấn:</b> mời khách khảo sát trường, đường đi và hiện trạng khu dân cư, kiểm chứng theo vị trí chính xác.</div><a class="btn btn-outline" href="#mau-phu">Sao chép mẫu Hòa Phú ↓</a></article>
+<article class="card"><span class="tag">NGỌC KHƯƠNG BRIENZ</span><h3>Cho khách thích khu vực thoáng</h3><p><b>Tin giới thiệu bên ngoài:</b> khu vực Hòa Khương, trục ĐH8 và Đồng Xanh – Đồng Nghệ.</p><p><b>Diện tích tham khảo:</b> khoảng 120–140m²; ngang một số nền 7–10m; thông tin đường khoảng 5,5m ở tin cũ.</p><p><b>Giá:</b> các nguồn rao cũ khác nhau, chưa có giá hiện hành do 68 Property xác nhận.</p><div class="callout"><b>Nên tư vấn:</b> gửi vị trí lô, ảnh có sẵn và tài liệu đã kiểm tra; tuyệt đối không đồng nghĩa “gần hồ” với “view hồ”.</div><a class="btn btn-outline" href="#mau-ngoc">Sao chép mẫu Ngọc Khương ↓</a></article>
 </div><div class="callout"><b>QUY TẮC CHUNG:</b> Không gắn mức giá 680 triệu, vay 500 triệu hoặc thời hạn công chứng 3 tháng mặc định cho bất kỳ dự án nào ở trên. Chỉ chào bán lô đã có chủ sở hữu, mã lô, giá và chính sách được xác nhận.</div></div></section>
-<section class="block" id="chien-luoc"><div class="wrap"><div class="intro"><span class="eyebrow">02 / LÀM VIỆC TINH GỌN</span><h2>3 việc chính, không ôm quá nhiều đầu mục</h2><p>Chọn một dự án trọng tâm, một nhóm người mua và một lời mời liên hệ cụ thể cho mỗi bài. Ưu tiên chất lượng hội thoại hơn số lượng nội dung.</p></div>
+<section class="block" id="chien-luoc"><div class="wrap"><div class="intro"><span class="eyebrow">02 / LÀM VIỆC TINH GỌN</span><h2>Mỗi ngày cứ làm theo 3 bước</h2><p>Mỗi bài chỉ giới thiệu một lô hoặc một nhóm lô, nhắm tới một kiểu khách hàng. Đăng ít nhưng nói rõ giá, vị trí và cách liên hệ.</p></div>
 <div class="grid grid3">
- <div class="card"><span class="tag tag-blue">BƯỚC 1</span><h3>Chọn một lô có thông tin rõ</h3><p>Lấy mã lô, giá mới, diện tích, tình trạng còn bán và thông tin pháp lý từ bảng hàng được leader duyệt.</p></div>
- <div class="card"><span class="tag tag-green">BƯỚC 2</span><h3>Viết theo cách mình nói</h3><p>Dùng 1 lợi thế đúng của lô, 1 nhu cầu thật của khách; thêm tên member và lời mời nhắn tin. Không đăng y nguyên mẫu chung.</p></div>
- <div class="card"><span class="tag">BƯỚC 3</span><h3>Đăng, trả lời, hẹn lịch</h3><p>Facebook cá nhân, nhóm phù hợp và Zalo. Ghi lại khách quan tâm, gửi thông tin theo nhu cầu, gọi xác nhận lịch hẹn.</p></div>
-</div><div class="callout"><b>Nguyên tắc 70/30:</b> Giữ khoảng 70% dữ liệu đã xác nhận (lô, giá, diện tích, vị trí, chính sách) và viết lại khoảng 30% bằng câu chuyện, cách giải thích, CTA của bản thân. Không tự thêm lợi thế chưa kiểm chứng.</div></div></section>
-<section class="block alt" id="lich"><div class="wrap"><div class="intro"><span class="eyebrow">03 / LỊCH LÀM VIỆC</span><h2>08:00–17:00: tập trung đăng tin và chăm sóc khách</h2><p>Áp dụng cho ngày làm việc trong chiến dịch 28/10–01/11/2026. Không xếp việc ngoài giờ, không phân công sản xuất hình ảnh hay đi khảo sát trong lịch này.</p></div>
-<div class="workday"><div class="workday-label">LỊCH MỖI NGÀY</div><div class="workday-title">08:00 <span>→</span> 17:00</div><p>Mỗi member chủ động lựa chọn nội dung theo bảng hàng đã duyệt. Thời gian nghỉ trưa: 11:30–13:30.</p></div>
+ <div class="card"><span class="tag tag-blue">BƯỚC 1</span><h3>Chọn lô đang có bán</h3><p>Hỏi trưởng nhóm mã lô, giá hiện tại, diện tích và giấy tờ. Chỉ chọn lô đã được xác nhận còn bán.</p></div>
+ <div class="card"><span class="tag tag-green">BƯỚC 2</span><h3>Viết bài bằng lời của bạn</h3><p>Chọn một điểm tốt đã kiểm tra, viết 4–6 câu dễ hiểu. Thêm tên của bạn và mời khách nhắn tin.</p></div>
+ <div class="card"><span class="tag">BƯỚC 3</span><h3>Đăng bài rồi trả lời khách</h3><p>Đăng lên Facebook hoặc Zalo. Khi khách hỏi, tìm hiểu ngân sách, gửi lô phù hợp và hẹn bước tiếp theo.</p></div>
+</div><div class="callout"><b>Cách dùng bài mẫu:</b> Giữ nguyên thông tin lô đã được duyệt. Bạn có thể đổi câu mở đầu và cách xưng hô cho tự nhiên, nhưng không tự thêm giá, tiện ích hay cam kết chưa kiểm tra.</div></div></section>
+<section class="block alt" id="lich"><div class="wrap"><div class="intro"><span class="eyebrow">03 / LỊCH LÀM VIỆC</span><h2>Một ngày làm việc từ 08:00 đến 17:00</h2><p>Bạn làm lần lượt từng việc theo bảng dưới đây. Chỉ tập trung đăng tin, trả lời khách, chốt hẹn và báo cáo. Không có ca làm việc ngoài 17:00.</p></div>
+<div class="workday"><div class="workday-label">LỊCH MỖI NGÀY</div><div class="workday-title">08:00 <span>→</span> 17:00</div><p>Bắt đầu bằng bảng hàng đã được duyệt. Nghỉ trưa từ 11:30 đến 13:30.</p></div>
 <div class="scroll"><table><thead><tr><th>Khung giờ</th><th>Việc chính</th><th>Hành động cụ thể</th><th>Kết quả cần có</th></tr></thead><tbody>
-<tr><td>08:00–09:00</td><td><b>Nhận hàng & chọn trọng tâm</b></td><td>Kiểm tra bảng giá, tồn kho và chính sách; chọn 1 dự án và 1 tệp khách</td><td>1 lô + 1 thông điệp</td></tr>
-<tr><td>09:00–10:00</td><td><b>Cá nhân hóa tin đăng</b></td><td>Chọn mẫu, sửa câu mở đầu, điền giá/lô đã duyệt, thay CTA bằng giọng của mình</td><td>1 bài hoàn chỉnh</td></tr>
-<tr><td>10:00–11:30</td><td><b>Đăng & tương tác</b></td><td>Đăng Facebook cá nhân, nhóm phù hợp và Zalo; trả lời bình luận, tin nhắn mới</td><td>1–2 bài đã đăng</td></tr>
+<tr><td>08:00–09:00</td><td><b>Chọn một lô để đăng</b></td><td>Xin bảng hàng mới từ trưởng nhóm; chọn một lô còn bán và một nhóm khách</td><td>1 lô có giá rõ</td></tr>
+<tr><td>09:00–10:00</td><td><b>Soạn bài theo mẫu</b></td><td>Chọn bài mẫu đúng dự án, điền giá và mã lô, sửa 2 câu cho tự nhiên</td><td>1 bài sẵn sàng đăng</td></tr>
+<tr><td>10:00–11:30</td><td><b>Đăng bài và trả lời khách</b></td><td>Đăng Facebook cá nhân, nhóm phù hợp hoặc Zalo; đọc và trả lời tin nhắn</td><td>1–2 bài đã đăng</td></tr>
 <tr><td>11:30–13:30</td><td><b>Nghỉ trưa</b></td><td>Không bố trí đầu việc bắt buộc</td><td>—</td></tr>
-<tr><td>13:30–14:30</td><td><b>Tư vấn khách quan tâm</b></td><td>Hỏi nhu cầu ở/tích sản, ngân sách, thời điểm mua; gửi lô phù hợp</td><td>Khách được phân loại</td></tr>
-<tr><td>14:30–15:30</td><td><b>Đăng biến thể</b></td><td>Viết một phiên bản khác cho tệp khách thứ hai; theo dõi phản hồi</td><td>1 bài/đoạn Zalo ngắn</td></tr>
-<tr><td>15:30–16:30</td><td><b>Chốt liên hệ & lịch hẹn</b></td><td>Gọi khách đủ nhu cầu, thống nhất bước tiếp theo và thời gian hẹn</td><td>Danh sách lịch hẹn</td></tr>
-<tr><td>16:30–17:00</td><td><b>Báo cáo ngắn</b></td><td>Ghi số bài, hội thoại, khách đủ điều kiện, lịch hẹn và vấn đề cần leader hỗ trợ</td><td>1 báo cáo trước 17:00</td></tr>
+<tr><td>13:30–14:30</td><td><b>Tư vấn khách quan tâm</b></td><td>Hỏi nhu cầu ở/tích sản, ngân sách, thời điểm mua; gửi lô phù hợp</td><td>Biết khách muốn gì</td></tr>
+<tr><td>14:30–15:30</td><td><b>Đăng một bài khác</b></td><td>Viết bài ngắn hơn hoặc đổi góc nói cho nhóm khách khác; không đăng trùng hàng loạt</td><td>1 bài hoặc tin Zalo</td></tr>
+<tr><td>15:30–16:30</td><td><b>Chốt liên hệ & lịch hẹn</b></td><td>Gọi hoặc nhắn khách có nhu cầu rõ; hỏi thời gian phù hợp để trao đổi tiếp</td><td>Có khách hẹn cụ thể</td></tr>
+<tr><td>16:30–17:00</td><td><b>Báo cáo ngắn</b></td><td>Ghi số bài đã đăng, khách đã hỏi, lịch hẹn và vấn đề cần trưởng nhóm hỗ trợ</td><td>1 báo cáo gửi nhóm</td></tr>
 </tbody></table></div>
-<div class="intro" style="margin:34px 0 17px"><span class="eyebrow">TRỌNG TÂM CHIẾN DỊCH</span><h3>Mỗi ngày một chủ đề để team không bị trùng lặp</h3></div>
+<div class="intro" style="margin:34px 0 17px"><span class="eyebrow">TRỌNG TÂM CHIẾN DỊCH</span><h3>Mỗi ngày tập trung một dự án</h3></div>
 <div class="days">
-<article class="day"><div class="day-top"><small>THỨ TƯ</small><strong>28/10</strong></div><div class="day-body"><span class="tag">CHUẨN HÓA</span><h3>Chọn lô và mẫu bài</h3><ul><li>Leader gửi bảng hàng đã duyệt</li><li>Mỗi người viết 1 bài có giọng riêng</li><li>Lưu câu hỏi khách thường gặp</li></ul></div></article>
+<article class="day"><div class="day-top"><small>THỨ TƯ</small><strong>28/10</strong></div><div class="day-body"><span class="tag">CHUẨN HÓA</span><h3>Chọn lô và mẫu bài</h3><ul><li>Trưởng nhóm gửi bảng hàng đã duyệt</li><li>Mỗi người viết 1 bài có giọng riêng</li><li>Lưu câu hỏi khách thường gặp</li></ul></div></article>
 <article class="day"><div class="day-top"><small>THỨ NĂM</small><strong>29/10</strong></div><div class="day-body"><span class="tag">LỘC KHƯƠNG</span><h3>Diện tích & ngân sách</h3><ul><li>Bài cho khách mua ở</li><li>Bài ngắn cho khách vốn vừa</li><li>Tư vấn lô đã xác nhận giá</li></ul></div></article>
 <article class="day"><div class="day-top"><small>THỨ SÁU</small><strong>30/10</strong></div><div class="day-body"><span class="tag">HÒA PHÚ</span><h3>Ở thực & trường học</h3><ul><li>Bài đất 120m² ngang 6m theo tin cũ, chỉ dùng sau xác minh</li><li>Tập trung nhu cầu gia đình</li><li>Hẹn khách nhận vị trí</li></ul></div></article>
 <article class="day"><div class="day-top"><small>THỨ BẢY</small><strong>31/10</strong></div><div class="day-body"><span class="tag">NGỌC KHƯƠNG</span><h3>Không gian sống</h3><ul><li>Bài theo nhu cầu an cư</li><li>Bài chọn đất tích sản</li><li>Chăm sóc khách hỏi khu ĐH8</li></ul></div></article>
 <article class="day"><div class="day-top"><small>CHỦ NHẬT</small><strong>01/11</strong></div><div class="day-body"><span class="tag">CHỐT HẸN</span><h3>So sánh 3 dự án</h3><ul><li>Bài nhắc thời hạn nếu giá còn hiệu lực</li><li>Nhắn lại khách quan tâm</li><li>Tổng hợp lịch xem và phản hồi</li></ul></div></article>
 </div></div></section>
-<section class="block" id="ca-nhan-hoa"><div class="wrap"><div class="intro"><span class="eyebrow">04 / CÔNG CỤ CÁ NHÂN HÓA</span><h2>Tạo bài đăng mang giọng của riêng bạn</h2><p>Chọn dự án, đối tượng mua và cách nói. Công cụ tạo bản nháp ngay trên thiết bị, không gửi thông tin đi đâu. Thông số điền vào phải là dữ liệu đã được xác nhận.</p></div>
-<div class="personal-layout"><div class="personal-panel"><div class="panel-title">01 · Điền thông tin của mình</div><div class="fields">
-<label>Member / tên xưng hô<input id="member-name" maxlength="55" placeholder="Ví dụ: Minh, Phương, Huy"></label>
+<section class="block" id="ca-nhan-hoa"><div class="wrap"><div class="intro"><span class="eyebrow">04 / CÔNG CỤ CÁ NHÂN HÓA</span><h2>Tạo bài đăng trong 1 phút</h2><p>Điền tên, chọn dự án và khách muốn tiếp cận. Nhấn “Tạo bài”, đọc lại và sửa cho giống cách bạn nói. Chỉ điền giá, diện tích đã được xác nhận.</p></div>
+<div class="personal-layout"><div class="personal-panel"><div class="panel-title">Bước 1 · Điền thông tin</div><div class="fields">
+<label>Tên của bạn<input id="member-name" maxlength="55" placeholder="Ví dụ: Minh, Phương, Huy"></label>
 <label>Dự án<select id="builder-project"><option value="loc">Lộc Khương Downtown</option><option value="phu">Hòa Phú</option><option value="ngoc">Ngọc Khương Brienz</option></select></label>
-<label>Khách muốn tiếp cận<select id="builder-audience"><option value="home">Mua đất để ở / gia đình trẻ</option><option value="saver">Cân đối ngân sách</option><option value="asset">Mua tích sản lâu dài</option></select></label>
-<label>Giọng văn<select id="builder-tone"><option value="warm">Chân thành, gần gũi</option><option value="pro">Rõ ràng, chuyên nghiệp</option><option value="short">Ngắn, vào thẳng vấn đề</option></select></label>
+<label>Khách bạn muốn tư vấn<select id="builder-audience"><option value="home">Mua đất để ở / gia đình trẻ</option><option value="saver">Cân đối ngân sách</option><option value="asset">Mua tích sản lâu dài</option></select></label>
+<label>Cách nói<select id="builder-tone"><option value="warm">Chân thành, gần gũi</option><option value="pro">Rõ ràng, chuyên nghiệp</option><option value="short">Ngắn, vào thẳng vấn đề</option></select></label>
 <label>Kênh đăng<select id="builder-channel"><option value="facebook">Facebook cá nhân</option><option value="group">Nhóm Facebook BĐS</option><option value="zalo">Zalo cá nhân / nhật ký</option></select></label>
-<label>Mã lô (nếu đã chốt)<input id="builder-lot" maxlength="45" placeholder="VD: LK-01"></label>
-<label>Diện tích đã xác minh<input id="builder-area" maxlength="70" placeholder="VD: 120m², ngang 6m"></label>
-<label>Giá đã được duyệt<input id="builder-price" maxlength="70" placeholder="VD: 850 triệu"></label>
-<label class="field-full">Lợi thế có bằng chứng (tùy chọn)<input id="builder-fact" maxlength="170" placeholder="VD: Mặt tiền đường nhựa rộng 7,5m theo hồ sơ lô"></label>
-</div><div class="builder-actions"><button class="btn btn-gold" id="generate-post" type="button">Tạo bài đăng của tôi ↗</button><button class="btn btn-outline" id="reset-builder" type="button">Đặt lại</button></div>
+<label>Mã lô đang bán (nếu có)<input id="builder-lot" maxlength="45" placeholder="VD: LK-01"></label>
+<label>Diện tích đã được duyệt<input id="builder-area" maxlength="70" placeholder="VD: 120m², ngang 6m"></label>
+<label>Giá đang bán đã được duyệt<input id="builder-price" maxlength="70" placeholder="VD: 850 triệu"></label>
+<label class="field-full">Điểm nổi bật đã kiểm tra (nếu có)<input id="builder-fact" maxlength="170" placeholder="VD: Mặt tiền đường nhựa rộng 7,5m theo hồ sơ lô"></label>
+</div><div class="builder-actions"><button class="btn btn-gold" id="generate-post" type="button">Tạo bài để đăng ↗</button><button class="btn btn-outline" id="reset-builder" type="button">Đặt lại</button></div>
 <p class="small">Không nhập số điện thoại khách, mã giấy tờ cá nhân hoặc thông tin nội bộ nhạy cảm. Giá trống sẽ được chuyển thành “nhận báo giá theo lô”, không tự suy diễn.</p></div>
-<div class="personal-preview"><div class="preview-top"><div><span class="eyebrow">BẢN NHÁP CỦA BẠN</span><h3>Kiểm tra trước khi đăng</h3></div><button class="copy" id="copy-generated" type="button">Sao chép bài ↗</button></div><pre id="generated-post" class="generated-post" aria-live="polite">Chọn thông tin bên trái và nhấn “Tạo bài đăng của tôi”.</pre><p id="builder-note" class="small">Bản nháp không tự thay thế bước xác nhận mã lô, giá, pháp lý và chính sách của leader.</p></div></div>
-<div class="grid grid3" style="margin-top:22px"><div class="card"><h3>Không viết giống cả team</h3><p>Thay câu mở đầu bằng điều mình thực sự quan tâm: mặt tiền, ngân sách hoặc kế hoạch xây nhà. Không kể câu chuyện khách hàng chưa từng xảy ra.</p></div><div class="card"><h3>Mỗi bài một tệp khách</h3><p>Người mua ở cần công năng, kết nối và pháp lý; người có ngân sách giới hạn cần phương án giá; người tích sản cần thông tin so sánh.</p></div><div class="card"><h3>Kết bằng lời mời dễ trả lời</h3><p>“Nhắn HÒA PHÚ để mình gửi mã lô còn bán” thường rõ hơn “liên hệ ngay”. Mỗi bài chỉ dùng một lời kêu gọi chính.</p></div></div>
+<div class="personal-preview"><div class="preview-top"><div><span class="eyebrow">BẢN NHÁP CỦA BẠN</span><h3>Đọc lại trước khi đăng</h3></div><button class="copy" id="copy-generated" type="button">Sao chép bài ↗</button></div><pre id="generated-post" class="generated-post" aria-live="polite">Chọn thông tin bên trái và nhấn “Tạo bài đăng của tôi”.</pre><p id="builder-note" class="small">Bản nháp chỉ là gợi ý. Hãy kiểm tra bảng hàng với trưởng nhóm trước khi đăng.</p></div></div>
+<div class="grid grid3" style="margin-top:22px"><div class="card"><h3>Nói tự nhiên như bạn thường nói</h3><p>Đổi câu mở đầu, ví dụ: “Em đang có lô đất phù hợp cho gia đình cần xây nhà”. Không kể chuyện hoặc đánh giá chưa xảy ra.</p></div><div class="card"><h3>Mỗi bài hướng tới một nhóm khách</h3><p>Khách mua ở cần biết đường, trường học và diện tích. Khách cân đối tiền cần biết giá thật. Khách tích lũy cần giấy tờ và vị trí.</p></div><div class="card"><h3>Cuối bài mời khách nhắn một câu</h3><p>Ví dụ: “Anh/chị nhắn HÒA PHÚ, em gửi vị trí và giá đang bán ạ”. Chỉ cần một lời mời như vậy.</p></div></div>
 </div></section>
-<section class="block alt" id="noi-dung"><div class="wrap"><div class="intro"><span class="eyebrow">05 / MẪU ĐĂNG SẴN</span><h2>Mẫu gợi ý – sửa lại theo cách bạn nói</h2><p>Bốn cách mở lời khác nhau, không phải bài mẫu để mọi người đăng nguyên văn. Hãy điền dữ liệu thật, thay [TÊN MEMBER], sửa 2–3 câu theo trải nghiệm và chỉ giữ thông tin đã xác minh.</p></div><div class="templates"><article class="template" id="mau-loc"><div class="template-head"><div><strong>01 · Lộc Khương Downtown</strong><small>Tệp khách tìm lô phù hợp ngân sách</small></div><button class="copy" data-copy="mau-loc-text">Sao chép ↗</button></div><div class="post" id="mau-loc-text">🏡 ĐẤT LỘC KHƯƠNG DOWNTOWN – CHỌN LÔ PHÙ HỢP NGÂN SÁCH TẠI HÒA KHƯƠNG
+<section class="block alt" id="noi-dung"><div class="wrap"><div class="intro"><span class="eyebrow">05 / MẪU ĐĂNG SẴN</span><h2>4 bài mẫu để bạn sửa và đăng</h2><p>Chọn mẫu đúng dự án, điền phần trong [ngoặc vuông], sửa câu mở đầu và câu cuối cho hợp với bạn. Đọc kỹ giá, vị trí và giấy tờ trước khi bấm đăng.</p></div><div class="templates"><article class="template" id="mau-loc"><div class="template-head"><div><strong>01 · Lộc Khương Downtown</strong><small>Khách đang tìm đất xây nhà</small></div><button class="copy" data-copy="mau-loc-text">Sao chép ↗</button></div><div class="post" id="mau-loc-text">🏡 ĐẤT LỘC KHƯƠNG DOWNTOWN – TÌM LÔ PHÙ HỢP ĐỂ XÂY NHÀ?
 
-Khi tìm đất để chuẩn bị xây nhà, mình nghĩ nên xem kỹ diện tích, mặt tiền và tổng số tiền cần chuẩn bị, thay vì chỉ nhìn mức giá quảng cáo.
+Anh/chị đang tìm đất khu vực Hòa Khương và muốn chọn lô vừa với số tiền mình dự tính?
 
-📍 Lộc Khương Downtown – khu vực Hòa Khương.
-📐 Danh mục giới thiệu trước đây có nền khoảng 120–150m², ngang 5–7m (cần kiểm tra theo mã lô).
-🔎 Lô đang giới thiệu: [MÃ LÔ] – [DIỆN TÍCH ĐÃ XÁC NHẬN].
-💰 Giá hiện tại: [GIÁ ĐÃ DUYỆT].
-📄 Hồ sơ pháp lý: [THÔNG TIN ĐÃ ĐƯỢC KIỂM TRA].
+Em đang có thông tin lô tại Lộc Khương Downtown để anh/chị tham khảo:
+📍 Vị trí: [VỊ TRÍ ĐÃ KIỂM TRA]
+📐 Diện tích: [DIỆN TÍCH, MẶT TIỀN]
+📌 Mã lô: [MÃ LÔ]
+💰 Giá hiện tại: [GIÁ ĐÃ DUYỆT]
+📄 Giấy tờ: [THÔNG TIN ĐÃ KIỂM TRA]
 
-Mình có thể gửi anh/chị bảng hàng cập nhật và thông tin từng lô để lựa chọn theo nhu cầu mua ở hoặc tích lũy.
+Em có thể gửi vị trí và thông tin đúng lô để anh/chị xem trước, không cần quyết định vội.
 
-📩 Nhắn “LỘC KHƯƠNG”, mình gửi danh sách lô phù hợp.
-📞 0905 647 582 – [TÊN MEMBER], 68 Property.
+📩 Nhắn “LỘC KHƯƠNG”, em gửi chi tiết ạ.
+📞 0905 647 582 – [TÊN BẠN], 68 Property
 
-#LocKhuongDowntown #DatHoaKhuong #DatVenDaNang</div><div style="padding:0 18px 18px" class="small"><b>SEO:</b> Đất Lộc Khương Downtown Hòa Khương 120–150m² – 68 Property</div></article><article class="template" id="mau-phu"><div class="template-head"><div><strong>02 · Hòa Phú 120m²</strong><small>Tệp khách mua để ở, quan tâm trường học</small></div><button class="copy" data-copy="mau-phu-text">Sao chép ↗</button></div><div class="post" id="mau-phu-text">🏡 HÒA PHÚ – LÔ ĐẤT 120M², NGANG 6M GẦN TRƯỜNG HỌC (CẦN XÁC MINH CÒN BÁN)
+#LocKhuongDowntown #DatHoaKhuong #DatVenDaNang</div><div style="padding:0 18px 18px" class="small"><b>Gợi ý tiêu đề Google:</b> Đất Lộc Khương Downtown Hòa Khương – Bảng lô đang bán | 68 Property</div></article><article class="template" id="mau-phu"><div class="template-head"><div><strong>02 · Hòa Phú</strong><small>Khách quan tâm trường học và đường đi</small></div><button class="copy" data-copy="mau-phu-text">Sao chép ↗</button></div><div class="post" id="mau-phu-text">🏡 ĐẤT HÒA PHÚ – GỢI Ý CHO ANH/CHỊ MUỐN MUA ĐẤT ĐỂ Ở
 
-Nếu anh/chị đang tìm đất để ở, đặc biệt là gia đình có con nhỏ, mình thường ưu tiên giới thiệu những vị trí có thể kiểm tra được đường đi và các tiện ích hằng ngày.
+Nếu gia đình mình quan tâm đường đi, trường học và cuộc sống hằng ngày, anh/chị có thể tham khảo lô em đang giới thiệu ở Hòa Phú.
 
-📍 Khu vực Hòa Phú.
-📐 Theo tin đăng 17–22/10: 120m², ngang 6m.
-🏫 Tin cũ mô tả đối diện Trường Tiểu học Hòa Phú; sẽ xác nhận lại vị trí từng lô.
-🛣️ Đường trước đất: [CHIỀU RỘNG ĐÃ KIỂM TRA].
-💰 Giá mới nhất: [GIÁ ĐÃ DUYỆT; TIN CŨ GHI 1,45 TỶ].
+📍 Khu vực: Hòa Phú – [VỊ TRÍ ĐÃ KIỂM TRA]
+📐 Diện tích: [DIỆN TÍCH, MẶT TIỀN]
+🛣️ Đường trước đất: [HIỆN TRẠNG ĐÃ KIỂM TRA]
+🏫 Trường học, tiện ích: [THÔNG TIN ĐÃ KIỂM TRA]
+💰 Giá hiện tại: [GIÁ ĐÃ DUYỆT]
+📄 Giấy tờ: [THÔNG TIN ĐÃ KIỂM TRA]
 
-Mình ưu tiên nói rõ những gì đã kiểm tra để anh/chị chủ động so sánh và quyết định.
+Em gửi anh/chị vị trí và ảnh của đúng lô để mình xem có phù hợp trước khi hẹn trao đổi.
 
-📩 Nhắn “HÒA PHÚ” để mình gửi mã lô, vị trí và tình trạng hàng đang còn.
-📞 0905 647 582 – [TÊN MEMBER], 68 Property.
+📩 Nhắn “HÒA PHÚ”, em gửi thông tin ạ.
+📞 0905 647 582 – [TÊN BẠN], 68 Property
 
-#DatHoaPhu #Dat120m2 #DatGanTruongHoc #DatDaNang</div><div style="padding:0 18px 18px" class="small"><b>SEO:</b> Đất Hòa Phú 120m² ngang 6m, gần trường học – 68 Property</div></article><article class="template" id="mau-ngoc"><div class="template-head"><div><strong>03 · Ngọc Khương Brienz</strong><small>Tệp khách chú trọng không gian sống</small></div><button class="copy" data-copy="mau-ngoc-text">Sao chép ↗</button></div><div class="post" id="mau-ngoc-text">🌿 NGỌC KHƯƠNG BRIENZ – TÌM ĐẤT Ở HÒA KHƯƠNG, ƯU TIÊN KHÔNG GIAN SỐNG
+#DatHoaPhu #DatHoaVang #DatDaNang</div><div style="padding:0 18px 18px" class="small"><b>Gợi ý tiêu đề Google:</b> Đất Hòa Phú đang bán – Giá, diện tích và vị trí thực tế | 68 Property</div></article><article class="template" id="mau-ngoc"><div class="template-head"><div><strong>03 · Ngọc Khương Brienz</strong><small>Khách muốn so sánh vị trí và diện tích</small></div><button class="copy" data-copy="mau-ngoc-text">Sao chép ↗</button></div><div class="post" id="mau-ngoc-text">🌿 NGỌC KHƯƠNG BRIENZ – ANH/CHỊ MUỐN TÌM ĐẤT Ở KHU VỰC HÒA KHƯƠNG?
 
-Có những anh/chị chọn đất vì ngân sách; cũng có người muốn khu vực ở thoáng, đủ diện tích và dễ kết nối đường chính. Mình muốn giới thiệu Ngọc Khương theo hướng đó, nhưng luôn kiểm tra từng lô trước.
+Có anh/chị thích mặt tiền rộng, có người lại ưu tiên đường đi và không gian sống. Em sẽ gửi từng lô cụ thể để mình dễ so sánh.
 
-📍 Khu vực Hòa Khương – tin rao trước đây nhắc đến trục ĐH8 và vùng Đồng Xanh – Đồng Nghệ.
-📐 Thông tin từng được rao: nền khoảng 120–140m²; không mặc định cho mọi lô.
-📌 Lô đang giới thiệu: [MÃ LÔ] – [DIỆN TÍCH ĐÃ XÁC NHẬN].
-💰 Giá hiện tại: [GIÁ ĐÃ DUYỆT].
-📄 Pháp lý: [THÔNG TIN ĐÃ XÁC MINH].
+📍 Khu vực: Ngọc Khương Brienz, Hòa Khương
+📌 Mã lô: [MÃ LÔ]
+📐 Diện tích: [DIỆN TÍCH, MẶT TIỀN]
+🛣️ Đường vào: [THÔNG TIN ĐÃ KIỂM TRA]
+💰 Giá hiện tại: [GIÁ ĐÃ DUYỆT]
+📄 Giấy tờ: [THÔNG TIN ĐÃ KIỂM TRA]
 
-Nếu anh/chị thích tìm hiểu trước rồi mới chọn, mình gửi thông tin cụ thể để so sánh nhé.
+Nếu anh/chị đang cân nhắc khu vực này, em gửi vị trí và thông tin đúng lô để mình xem trước nhé.
 
-📩 Nhắn “NGỌC KHƯƠNG” để nhận bảng lô hiện có.
-📞 0905 647 582 – [TÊN MEMBER], 68 Property.
+📩 Nhắn “NGỌC KHƯƠNG”, em gửi chi tiết ạ.
+📞 0905 647 582 – [TÊN BẠN], 68 Property
 
-#NgocKhuongBrienz #DatHoaKhuong #DatDH8</div><div style="padding:0 18px 18px" class="small"><b>SEO:</b> Đất Ngọc Khương Brienz Hòa Khương gần ĐH8 – 68 Property</div></article><article class="template" id="mau-680"><div class="template-head"><div><strong>04 · Chương trình từ 680 triệu</strong><small>Chỉ dùng với lô có giá được leader xác nhận</small></div><button class="copy" data-copy="mau-680-text">Sao chép ↗</button></div><div class="post" id="mau-680-text">💰 TÌM ĐẤT VEN ĐÀ NẴNG PHÙ HỢP NGÂN SÁCH? MÌNH GỬI DANH SÁCH LÔ ĐANG CÒN
+#NgocKhuongBrienz #DatHoaKhuong #DatDaNang</div><div style="padding:0 18px 18px" class="small"><b>Gợi ý tiêu đề Google:</b> Đất Ngọc Khương Brienz Hòa Khương – Xem vị trí, giá | 68 Property</div></article><article class="template" id="mau-680"><div class="template-head"><div><strong>04 · Chương trình từ 680 triệu</strong><small>Chỉ dùng khi đã xác nhận có lô đúng giá</small></div><button class="copy" data-copy="mau-680-text">Sao chép ↗</button></div><div class="post" id="mau-680-text">💰 TÌM ĐẤT VEN ĐÀ NẴNG VỪA NGÂN SÁCH? EM GỬI LÔ ĐANG BÁN
 
-Nếu anh/chị đã có khoản tích lũy và muốn mua đất để ở hoặc giữ lâu dài, điều đầu tiên nên làm là xem bảng giá đúng từng lô, giấy tờ và các chi phí dự kiến.
+Anh/chị muốn mua đất để ở hay để dành nhưng đang cân nhắc số tiền cần chuẩn bị? Em có thể giúp mình xem những lô phù hợp.
 
-📍 Khu vực: [KHU VỰC ĐÃ XÁC NHẬN].
-📌 Mã lô: [MÃ LÔ].
-📐 Diện tích: [DIỆN TÍCH].
-💰 Giá đã xác nhận: [GIÁ].
-📄 Pháp lý: [THÔNG TIN ĐÃ KIỂM TRA].
+📍 Khu vực: [KHU VỰC]
+📌 Mã lô: [MÃ LÔ ĐANG CÒN]
+📐 Diện tích: [DIỆN TÍCH]
+💰 Giá hiện tại: [GIÁ ĐÃ DUYỆT]
+📄 Giấy tờ: [THÔNG TIN ĐÃ KIỂM TRA]
 
-Nếu lô đủ điều kiện, mình có thể hỗ trợ kết nối tư vấn tài chính; khoản vay vẫn phụ thuộc thẩm định ngân hàng. Tiến độ thanh toán hoặc công chứng cũng cần thỏa thuận riêng với bên bán.
+Nếu cần vay ngân hàng hoặc thêm thời gian thanh toán, em sẽ hỏi chính sách của đúng lô và hỗ trợ anh/chị tìm hiểu. Các điều kiện này cần được bên liên quan xác nhận.
 
-📩 Nhắn “TÀI CHÍNH” để mình gửi lô phù hợp khả năng chuẩn bị của anh/chị.
-📞 0905 647 582 – [TÊN MEMBER], 68 Property.
+📩 Nhắn “TÀI CHÍNH” và cho em biết ngân sách dự kiến, em gửi lô phù hợp ạ.
+📞 0905 647 582 – [TÊN BẠN], 68 Property
 
-#DatVenDaNang #DatGiaTot #68Property</div><div style="padding:0 18px 18px" class="small"><b>SEO:</b> Đất ven Đà Nẵng từ 680 triệu – nhận lô thật, giá đã xác minh</div></article></div><div class="callout"><strong>Lưu ý trước khi đăng:</strong> “Hỗ trợ tư vấn vay ngân hàng đến 500 triệu theo kết quả thẩm định. Lịch thanh toán linh hoạt, có thể thỏa thuận công chứng đến 3 tháng theo từng lô.” Không thêm mặc định cho toàn bộ danh mục.</div></div></section>
-<section class="block" id="chuyen-doi"><div class="wrap"><div class="intro"><span class="eyebrow">06 / TƯ VẤN VÀ CHỐT HẸN</span><h2>Đăng xong phải biết làm gì với khách nhắn tin</h2><p>Nhận diện nhu cầu nhanh, gửi đúng sản phẩm và hỏi một câu rõ ràng để thống nhất bước tiếp theo. Mục tiêu là cuộc hẹn chất lượng, không phải bình luận nhiều.</p></div>
-<div class="grid grid3"><div class="card"><span class="tag tag-blue">FACEBOOK CÁ NHÂN</span><h3>Viết bằng giọng của mình</h3><p>Mở bằng nhu cầu người mua, kể ngắn điều mình thấy quan trọng, gắn thông tin lô đã duyệt và kêu gọi nhắn từ khóa.</p></div>
-<div class="card"><span class="tag">NHÓM BẤT ĐỘNG SẢN</span><h3>Rõ tên khu, diện tích, giá</h3><p>Tiêu đề có địa điểm và thông tin nổi bật; không dùng lời hứa tăng giá hoặc trùng bài hàng loạt.</p></div>
-<div class="card"><span class="tag tag-green">ZALO CÁ NHÂN</span><h3>Ngắn và dễ hồi đáp</h3><p>Chỉ một sản phẩm, hai đặc điểm nổi bật, một câu: “Anh/chị muốn em gửi vị trí không ạ?”.</p></div></div>
-<h3 style="margin:32px 0 17px">Quy trình 4 bước xử lý khách</h3>
+#DatVenDaNang #DatHoaVang #68Property</div><div style="padding:0 18px 18px" class="small"><b>Gợi ý tiêu đề Google:</b> Đất ven Đà Nẵng phù hợp ngân sách – Có giá và vị trí rõ | 68 Property</div></article></div><div class="callout"><strong>Lưu ý trước khi đăng:</strong> “Hỗ trợ tư vấn vay ngân hàng đến 500 triệu theo kết quả thẩm định. Lịch thanh toán linh hoạt, có thể thỏa thuận công chứng đến 3 tháng theo từng lô.” Không thêm mặc định cho toàn bộ danh mục.</div></div></section>
+<section class="block" id="chuyen-doi"><div class="wrap"><div class="intro"><span class="eyebrow">06 / TƯ VẤN VÀ CHỐT HẸN</span><h2>Khách nhắn tin thì trả lời thế nào?</h2><p>Đầu tiên hỏi khách mua để ở hay để dành, ngân sách khoảng bao nhiêu. Sau đó gửi đúng lô đang bán và hỏi khách muốn nhận thêm thông tin hay hẹn trao đổi.</p></div>
+<div class="grid grid3"><div class="card"><span class="tag tag-blue">FACEBOOK CÁ NHÂN</span><h3>Nói chuyện tự nhiên</h3><p>Nêu nhu cầu khách, giới thiệu một điểm tốt của lô và mời nhắn tin. Đừng đăng giống hệt mọi người.</p></div>
+<div class="card"><span class="tag">NHÓM BẤT ĐỘNG SẢN</span><h3>Ghi rõ lô, giá và vị trí</h3><p>Tiêu đề nên có khu vực, diện tích và giá đã được duyệt. Tránh ghi “chắc chắn tăng giá”.</p></div>
+<div class="card"><span class="tag tag-green">ZALO CÁ NHÂN</span><h3>Chỉ nói ngắn gọn</h3><p>Giới thiệu một lô, một đến hai điểm nổi bật, rồi hỏi “Anh/chị muốn em gửi vị trí không ạ?”.</p></div></div>
+<h3 style="margin:32px 0 17px">4 bước trả lời khách</h3>
 <div class="flow four"><div class="flow-step"><i>💬</i><b>1 · Nhận tin</b><small>Từ khóa dự án</small></div><div class="flow-step"><i>🎯</i><b>2 · Hỏi nhu cầu</b><small>Mục đích + ngân sách</small></div><div class="flow-step"><i>📄</i><b>3 · Gửi lô phù hợp</b><small>Giá + vị trí + pháp lý</small></div><div class="flow-step"><i>📅</i><b>4 · Chốt bước tiếp</b><small>Thời gian gọi / lịch hẹn</small></div></div>
-<div class="grid grid2" style="margin-top:22px"><div class="card"><h3>Khách hỏi “Còn lô này không?”</h3><p>“Dạ em kiểm tra bảng hàng giúp anh/chị ngay ạ. Anh/chị muốn chọn để ở hay tích sản, và mình dự kiến khoảng ngân sách nào để em gửi đúng lô còn bán?”</p><button class="copy" data-copy="reply-available" type="button">Sao chép câu trả lời</button><div id="reply-available" hidden>Dạ em kiểm tra bảng hàng giúp anh/chị ngay ạ. Anh/chị muốn chọn để ở hay tích sản, và mình dự kiến khoảng ngân sách nào để em gửi đúng lô còn bán?</div></div>
-<div class="card"><h3>Khách hỏi “Gửi vị trí, giá đi em”</h3><p>“Dạ em gửi anh/chị mã lô, giá đang áp dụng và vị trí đã đối chiếu. Anh/chị tiện nhận qua Zalo hay tin nhắn này để em gửi đủ thông tin ạ?”</p><button class="copy" data-copy="reply-location" type="button">Sao chép câu trả lời</button><div id="reply-location" hidden>Dạ em gửi anh/chị mã lô, giá đang áp dụng và vị trí đã đối chiếu. Anh/chị tiện nhận qua Zalo hay tin nhắn này để em gửi đủ thông tin ạ?</div></div></div>
+<div class="grid grid2" style="margin-top:22px"><div class="card"><h3>Khách hỏi: “Lô này còn không em?”</h3><p>“Dạ để em kiểm tra lô này còn bán không ạ. Anh/chị đang tìm đất để ở hay để dành, dự kiến khoảng bao nhiêu tiền để em gửi đúng lô phù hợp?”</p><button class="copy" data-copy="reply-available" type="button">Sao chép câu trả lời</button><div id="reply-available" hidden>Dạ để em kiểm tra lô này còn bán không ạ. Anh/chị đang tìm đất để ở hay để dành, dự kiến khoảng bao nhiêu tiền để em gửi đúng lô phù hợp?</div></div>
+<div class="card"><h3>Khách hỏi: “Gửi em vị trí và giá nhé”</h3><p>“Dạ em gửi ngay vị trí và giá của lô đã kiểm tra ạ. Anh/chị muốn nhận ở đây hay qua Zalo để dễ mở bản đồ?”</p><button class="copy" data-copy="reply-location" type="button">Sao chép câu trả lời</button><div id="reply-location" hidden>Dạ em gửi ngay vị trí và giá của lô đã kiểm tra ạ. Anh/chị muốn nhận ở đây hay qua Zalo để dễ mở bản đồ?</div></div></div>
 </div></section>
-<section class="block alt" id="checklist"><div class="wrap"><div class="intro"><span class="eyebrow">07 / CHECKLIST MEMBER</span><h2>Hoàn thành trước 17:00</h2><p>Đánh dấu công việc thực hiện trong ngày. Tiến độ chỉ lưu trên máy của bạn; dùng nút sao chép báo cáo để gửi nhóm.</p></div><div class="check-layout"><div id="tasks" class="checks">
+<section class="block alt" id="faq"><div class="wrap">
+<div class="intro"><span class="eyebrow">07 / HỎI ĐÁP CHO NHÂN VIÊN MỚI</span><h2>Câu hỏi thường gặp – trả lời sao cho dễ hiểu?</h2><p>15 câu hỏi lấy từ tài liệu tư vấn anh/chị cung cấp. Bấm vào câu hỏi để xem câu trả lời ngắn, rồi sao chép nếu cần. Khi chưa kiểm tra đúng lô, hãy hẹn khách xác nhận lại thay vì đoán.</p></div>
+<div class="faq-tools"><label for="faq-search">🔎 Tìm câu hỏi</label><input id="faq-search" type="search" placeholder="Ví dụ: sổ đỏ, vay, đường, ngập…" autocomplete="off" aria-describedby="faq-status"><p id="faq-status" aria-live="polite">15 câu hỏi · Chạm vào câu hỏi để mở câu trả lời</p></div>
+<div class="faq-groups"><div class="faq-group"><h3>Vị trí &amp; khu dân cư</h3><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Đất ở thôn, xã nào? Gửi Google Maps được không?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-1-1">Dạ được ạ. Em gửi vị trí Google Maps của đúng lô và ghi rõ thôn, xã để anh/chị xem đường đi trước nhé.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Kiểm tra ghim bản đồ khớp đúng mã lô.</p><button class="copy" type="button" data-copy="faq-1-1">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Đường trước đất rộng bao nhiêu?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-1-2">Dạ em sẽ gửi chiều rộng đường đang sử dụng và thông tin quy hoạch đường (nếu có) riêng để anh/chị dễ hiểu ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không gộp lòng đường, lề và đường quy hoạch thành một con số.</p><button class="copy" type="button" data-copy="faq-1-2">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Khu này có ngập khi mưa lớn không?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-1-3">Dạ em chưa muốn khẳng định khi chưa kiểm tra. Em sẽ tìm hiểu lịch sử ngập tại vị trí này và gửi lại anh/chị ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Hỏi người dân tại chỗ và tra cứu thêm dữ liệu đáng tin cậy.</p><button class="copy" type="button" data-copy="faq-1-3">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Từ đất về trung tâm Đà Nẵng bao xa?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-1-4">Dạ em gửi tuyến đường từ vị trí lô đến điểm anh/chị muốn đến. Số km và thời gian đi sẽ theo tuyến đường và tình hình giao thông ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không dùng chung số 17 km hoặc 20 phút cho mọi lô.</p><button class="copy" type="button" data-copy="faq-1-4">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Ở đây có dân cư, điện nước chưa?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-1-5">Dạ em sẽ gửi hình khu dân cư và kiểm tra điện, nước đang có tại đúng lô. Nếu cần đấu nối, em sẽ hỏi thêm thủ tục để anh/chị nắm rõ ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Chỉ nói đã có điện, nước khi được xác minh.</p><button class="copy" type="button" data-copy="faq-1-5">Sao chép câu trả lời</button></div></details></div><div class="faq-group"><h3>Giá, vay vốn &amp; chi phí</h3><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Giá này còn thương lượng được không?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-2-1">Dạ đây là giá chủ đất đang chào. Nếu anh/chị quan tâm thực sự, em sẽ trao đổi lại với chủ về mức giá mình đề xuất rồi báo chính xác ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không hứa trước mức giảm hoặc giá chốt.</p><button class="copy" type="button" data-copy="faq-2-1">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Nếu mua ngay thì chủ có bớt thêm không?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-2-2">Dạ anh/chị cho em biết mức giá mình mong muốn. Em xin ý kiến chủ đất rồi phản hồi, chứ chưa thể cam kết chủ sẽ đồng ý ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không yêu cầu khách chuyển tiền để chứng minh thiện chí.</p><button class="copy" type="button" data-copy="faq-2-2">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Em muốn vay ngân hàng, lãi suất bao nhiêu?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-2-3">Dạ lãi suất và số tiền được vay tùy ngân hàng, hồ sơ và thời hạn vay. Anh/chị định vay bao nhiêu và muốn trả trong mấy năm để em hỗ trợ tìm hiểu ạ?</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không cam kết được duyệt khoản vay 500 triệu.</p><button class="copy" type="button" data-copy="faq-2-3">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Ngân sách khoảng 1 tỷ, có lô nào gần hơn không?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-2-4">Dạ em hiểu anh/chị muốn gần hơn và ngân sách khoảng 1 tỷ. Em kiểm tra những lô đang còn theo vị trí ưu tiên, rồi gửi vài lựa chọn để mình so sánh nhé.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không nói một khu vực “hết đất dưới 1 tỷ” nếu chưa kiểm tra bảng hàng.</p><button class="copy" type="button" data-copy="faq-2-4">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Thuế và phí sang tên gồm những gì?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-2-5">Dạ thường có thuế thu nhập cá nhân, lệ phí trước bạ, phí công chứng và hồ sơ. Em sẽ gửi bảng ước tính; khoản nào bên mua hay bên bán chịu cần xem quy định và thỏa thuận giao dịch ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không mặc định bên mua chịu tất cả thuế phí.</p><button class="copy" type="button" data-copy="faq-2-5">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Khách chưa đủ tiền, muốn dời ngày công chứng?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-2-6">Dạ anh/chị cần dời khoảng bao nhiêu ngày ạ? Em sẽ trao đổi với chủ đất. Nếu hai bên đồng ý, mình cần xác nhận lại bằng văn bản để tránh hiểu nhầm.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Kiểm tra hợp đồng đặt cọc; không khẳng định tự động mất cọc.</p><button class="copy" type="button" data-copy="faq-2-6">Sao chép câu trả lời</button></div></details></div><div class="faq-group"><h3>Sổ đỏ, quy hoạch &amp; lối đi</h3><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Đất có sổ riêng và đủ thổ cư không?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-3-1">Dạ em sẽ kiểm tra giấy chứng nhận của đúng lô và gửi thông tin diện tích đất ở, diện tích đất khác nếu có. Mỗi lô có thể khác nhau ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không mặc định mọi lô đều có sổ riêng hoặc 100% thổ cư.</p><button class="copy" type="button" data-copy="faq-3-1">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Đất có vướng quy hoạch hay tranh chấp không?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-3-2">Dạ bên em sẽ hỗ trợ kiểm tra giấy tờ, thông tin quy hoạch và tình trạng pháp lý của đúng thửa trước khi anh/chị quyết định đặt cọc ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Đối chiếu nguồn thông tin chính thức, không chỉ dựa vào lời giới thiệu.</p><button class="copy" type="button" data-copy="faq-3-2">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Khu này có tiềm năng tăng giá không?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-3-3">Dạ giá đất có thể tăng hoặc giảm. Em sẽ gửi thông tin vị trí, khu vực và giá hiện có để anh/chị cân nhắc theo nhu cầu và ngân sách ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Không cam kết tăng giá hay lợi nhuận.</p><button class="copy" type="button" data-copy="faq-3-3">Sao chép câu trả lời</button></div></details><details class="faq-item" data-faq-item>
+<summary><span class="faq-question">Có lối đi chung thì có ảnh hưởng gì?</span><span class="faq-chevron" aria-hidden="true">⌄</span></summary>
+<div class="faq-content"><p id="faq-3-4">Dạ nếu lô có lối đi chung, em sẽ hỗ trợ anh/chị kiểm tra giấy tờ, quyền sử dụng lối đi và các thỏa thuận liên quan trước khi quyết định ạ.</p><p class="faq-note"><strong>Nhớ kiểm tra:</strong> Hỏi rõ hồ sơ lối đi, ranh giới và quyền sử dụng.</p><button class="copy" type="button" data-copy="faq-3-4">Sao chép câu trả lời</button></div></details></div></div><p id="faq-empty" hidden>Không thấy câu hỏi phù hợp. Thử tìm bằng một từ ngắn hơn nhé.</p>
+<div class="callout"><b>3 điều phải nhớ:</b> (1) Không chắc thì nói “Em kiểm tra rồi gửi lại anh/chị”. (2) Không tự hứa giá tốt, không ngập, không quy hoạch hay vay chắc được. (3) Chưa có thỏa thuận bằng văn bản thì không yêu cầu khách chuyển tiền.</div>
+</div></section>
+<section class="block alt" id="checklist"><div class="wrap"><div class="intro"><span class="eyebrow">08 / CHECKLIST NHÂN VIÊN</span><h2>Kiểm tra 9 việc trước 17:00</h2><p>Làm xong việc nào thì tích việc đó. Danh sách chỉ lưu trên thiết bị của bạn; cuối giờ nhấn “Sao chép báo cáo ngày” để gửi vào nhóm.</p></div><div class="check-layout"><div id="tasks" class="checks">
 <label class="check"><input type="checkbox"><span>Nhận bảng hàng đã duyệt và chọn dự án/mã lô đang còn bán.</span></label>
 <label class="check"><input type="checkbox"><span>Kiểm tra giá, diện tích, pháp lý và chính sách đúng theo lô.</span></label>
-<label class="check"><input type="checkbox"><span>Chọn tệp khách và chỉnh bài bằng giọng cá nhân, không đăng mẫu nguyên văn.</span></label>
-<label class="check"><input type="checkbox"><span>Đăng 1–2 nội dung phù hợp lên Facebook cá nhân, nhóm và/hoặc Zalo.</span></label>
-<label class="check"><input type="checkbox"><span>Trả lời hết bình luận, tin nhắn mới trong ca làm việc.</span></label>
-<label class="check"><input type="checkbox"><span>Ghi nhận nhu cầu và ngân sách khách quan tâm đủ điều kiện.</span></label>
+<label class="check"><input type="checkbox"><span>Chọn nhóm khách và sửa bài cho giống cách bạn thường nói; không đăng nguyên mẫu.</span></label>
+<label class="check"><input type="checkbox"><span>Đăng 1–2 bài đã chỉnh theo cách nói của mình lên Facebook hoặc Zalo.</span></label>
+<label class="check"><input type="checkbox"><span>Trả lời bình luận và tin nhắn mới trong giờ làm việc.</span></label>
+<label class="check"><input type="checkbox"><span>Ghi lại khách mua để ở hay tích lũy, ngân sách và số liên hệ khi khách đồng ý.</span></label>
 <label class="check"><input type="checkbox"><span>Gửi thông tin sản phẩm chính xác và hỏi bước tiếp theo.</span></label>
 <label class="check"><input type="checkbox"><span>Gọi hoặc nhắn xác nhận lịch hẹn cho khách có nhu cầu rõ ràng.</span></label>
 <label class="check"><input type="checkbox"><span>Báo cáo số bài, hội thoại, khách chất lượng và lịch hẹn trước 17:00.</span></label>
 </div><aside class="progress"><span class="eyebrow" style="color:#edc38a">TIẾN ĐỘ HÔM NAY</span><div id="completed" class="n">0/9</div><div class="progress-meter"><div id="meter"></div></div><p id="progress-text">Đánh dấu từng việc hoàn thành.</p><button class="btn btn-gold" id="report" type="button">Sao chép báo cáo ngày</button><button class="btn btn-ghost" id="reset" type="button">Đặt lại checklist</button></aside></div></div></section>
-<section class="block" id="kpi"><div class="wrap"><div class="intro"><span class="eyebrow">08 / ĐO HIỆU QUẢ</span><h2>Ít đầu việc hơn, nhưng đo đúng kết quả</h2><p>Mục tiêu thử nghiệm cho mỗi member theo ngày và cả chiến dịch; điều chỉnh theo số lượng khách thực tế, không đánh giá chỉ qua lượt thích.</p></div>
-<div class="grid grid4"><div class="card"><span class="eyebrow">MỖI NGÀY</span><h2 style="font-size:33px;margin:10px 0">1–2</h2><p>Bài đăng đã cá nhân hóa, có lô được duyệt</p></div><div class="card"><span class="eyebrow">MỖI NGÀY</span><h2 style="font-size:33px;margin:10px 0">100%</h2><p>Tin nhắn mới được phản hồi trong giờ làm việc</p></div><div class="card"><span class="eyebrow">CHIẾN DỊCH / MEMBER</span><h2 style="font-size:33px;margin:10px 0">5–10</h2><p>Khách đủ thông tin để chăm sóc tiếp</p></div><div class="card"><span class="eyebrow">CHIẾN DỊCH / MEMBER</span><h2 style="font-size:33px;margin:10px 0">2–3</h2><p>Lịch hẹn mục tiêu có xác nhận</p></div></div>
-<div class="grid grid2" style="margin-top:17px"><div class="card"><span class="tag">LEADER</span><h3>Duyệt bảng hàng và xử lý vướng mắc</h3><p>Chốt sản phẩm được phép đăng, giá và chính sách; hỗ trợ member trả lời vấn đề khó.</p></div><div class="card"><span class="tag tag-green">MEMBER</span><h3>Đăng nội dung có dấu ấn cá nhân</h3><p>Tự chọn tệp khách, viết lại mẫu, trả lời tin nhắn, theo lịch 08:00–17:00 và gửi báo cáo cuối ngày.</p></div></div>
-<div class="callout"><b>Nguyên tắc bảo vệ uy tín:</b> Không quảng cáo “giá từ 680 triệu” cho các lô chưa có mã và bảng giá xác nhận. Không ngụ ý ngân hàng chắc chắn duyệt vay 500 triệu, mọi lô công chứng được sau 3 tháng, đất chắc chắn tăng giá hoặc pháp lý hoàn hảo khi chưa có giấy tờ kiểm chứng.</div></div></section>
+<section class="block" id="kpi"><div class="wrap"><div class="intro"><span class="eyebrow">09 / ĐO HIỆU QUẢ</span><h2>Đo kết quả bằng số khách thật</h2><p>Đừng chỉ nhìn lượt thích. Hãy đếm số khách hỏi thật, số người nhận thông tin và số lịch hẹn đã xác nhận.</p></div>
+<div class="grid grid4"><div class="card"><span class="eyebrow">MỖI NGÀY</span><h2 style="font-size:33px;margin:10px 0">1–2</h2><p>Bài đăng đã cá nhân hóa, có lô được duyệt</p></div><div class="card"><span class="eyebrow">MỖI NGÀY</span><h2 style="font-size:33px;margin:10px 0">100%</h2><p>Tin nhắn mới được phản hồi trong giờ làm việc</p></div><div class="card"><span class="eyebrow">CẢ CHIẾN DỊCH / NGƯỜI</span><h2 style="font-size:33px;margin:10px 0">5–10</h2><p>Khách đã trao đổi nhu cầu và cách liên hệ</p></div><div class="card"><span class="eyebrow">CẢ CHIẾN DỊCH / NGƯỜI</span><h2 style="font-size:33px;margin:10px 0">2–3</h2><p>Lịch hẹn mục tiêu có xác nhận</p></div></div>
+<div class="grid grid2" style="margin-top:17px"><div class="card"><span class="tag">TRƯỞNG NHÓM</span><h3>Duyệt giá và trả lời câu khó</h3><p>Xác nhận lô đang bán, giá và giấy tờ. Hỗ trợ nhân viên khi khách hỏi vấn đề chưa rõ.</p></div><div class="card"><span class="tag tag-green">MEMBER</span><h3>Đăng bài riêng, chăm khách đúng hẹn</h3><p>Chọn khách muốn tư vấn, sửa mẫu cho tự nhiên, trả lời tin nhắn và báo cáo trước 17:00.</p></div></div>
+<div class="callout"><b>Không nói quá để chốt khách:</b> Không quảng cáo “giá từ 680 triệu” cho các lô chưa có mã và bảng giá xác nhận. Không ngụ ý ngân hàng chắc chắn duyệt vay 500 triệu, mọi lô công chứng được sau 3 tháng, đất chắc chắn tăng giá hoặc pháp lý hoàn hảo khi chưa có giấy tờ kiểm chứng.</div></div></section>
 </main>
-<footer class="footer"><div class="wrap footer-inner"><div><a href="#dau" class="brand"><span class="mark">68</span><span>68 PROPERTY <small>BẮT TAY XÂY DỰNG ƯỚC MƠ</small></span></a><p>Sổ tay đăng tin và tư vấn Team Phát Tài (08:00–17:00). Dữ liệu sản phẩm từ tin tháng 10/2026 và nguồn tham khảo; chỉ dùng thông tin đã được xác nhận cho từng lô khi bán hàng.</p></div><div><a class="tel" href="tel:0905647582">0905 647 582</a><div style="font-size:12px;color:#a6b5c7">Đầu mối hỗ trợ 68 Property</div></div></div></footer>
+<footer class="footer"><div class="wrap footer-inner"><div><a href="#dau" class="brand"><span class="mark">68</span><span>68 PROPERTY <small>BẮT TAY XÂY DỰNG ƯỚC MƠ</small></span></a><p>Sổ tay dành cho nhân viên Team Phát Tài. Giá, diện tích, pháp lý và chính sách của từng lô phải được xác nhận trước khi đăng hoặc tư vấn.</p></div><div><a class="tel" href="tel:0905647582">0905 647 582</a><div style="font-size:12px;color:#a6b5c7">Đầu mối hỗ trợ 68 Property</div></div></div></footer>
 <div class="bottom"><a href="#noi-dung" class="btn btn-light">📋 Lấy mẫu đăng</a><a href="#checklist" class="btn btn-gold">✓ Checklist</a></div>
 <script>
 (function(){
   const cd=document.getElementById('countdown'),end=new Date('2026-11-01T23:59:59+07:00').getTime();
-  function tick(){const x=end-Date.now();if(x<=0){cd.textContent='Chiến dịch 28/10 – 01/11/2026 đã kết thúc. Trang được giữ làm tài liệu tham khảo.';return;}const d=Math.floor(x/86400000),h=Math.floor(x%86400000/3600000),m=Math.floor(x%3600000/60000);cd.textContent='⏳ Còn '+d+' ngày '+h+' giờ '+m+' phút đến hạn kết thúc chiến dịch.';}
+  function tick(){const x=end-Date.now();if(x<=0){cd.textContent='Chiến dịch 28/10 – 01/11/2026 đã kết thúc. Bạn vẫn có thể dùng sổ tay này để học cách đăng tin và tư vấn.';return;}const d=Math.floor(x/86400000),h=Math.floor(x%86400000/3600000),m=Math.floor(x%3600000/60000);cd.textContent='⏳ Còn '+d+' ngày '+h+' giờ '+m+' phút đến hạn kết thúc chiến dịch.';}
   tick();setInterval(tick,60000);
   function fallback(text){const e=document.createElement('textarea');e.value=text;e.style.position='fixed';e.style.left='-10000px';document.body.appendChild(e);e.select();let ok=false;try{ok=document.execCommand('copy');}catch(err){}e.remove();return ok;}
   async function copyText(text){try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return true;}}catch(err){}return fallback(text);}
   function flash(el,text){const old=el.textContent;el.textContent=text;setTimeout(()=>el.textContent=old,1800);}
   document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const text=document.getElementById(b.dataset.copy).textContent.trim();flash(b,await copyText(text)?'✓ Đã sao chép':'Không sao chép được');}));
+
+
+  // Search FAQ by question keywords, including unaccented input.
+  const faqInput=document.getElementById('faq-search');
+  const faqItems=[...document.querySelectorAll('[data-faq-item]')];
+  const faqGroups=[...document.querySelectorAll('.faq-group')];
+  const normalizeVi=t=>t.toLocaleLowerCase('vi-VN').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d');
+  function filterFaq(){
+    const term=normalizeVi(faqInput.value.trim());let visible=0;
+    faqItems.forEach(el=>{const match=!term||normalizeVi(el.querySelector('summary').textContent).includes(term);el.hidden=!match;if(match)visible++;});
+    faqGroups.forEach(el=>{el.hidden=![...el.querySelectorAll('[data-faq-item]')].some(x=>!x.hidden)});
+    document.getElementById('faq-empty').hidden=visible!==0;
+    document.getElementById('faq-status').textContent=term?visible+' câu hỏi phù hợp':'15 câu hỏi · Chạm vào câu hỏi để mở câu trả lời';
+  }
+  faqInput.addEventListener('input',filterFaq);
 
   // Personal post builder: no network, no tracking, user text inserted with textContent only.
   const B = id=>document.getElementById(id);
@@ -198,23 +262,23 @@ Nếu lô đủ điều kiện, mình có thể hỗ trợ kết nối tư vấn
     phu:{name:'Hòa Phú',place:'Hòa Phú',key:'HÒA PHÚ',tag:'#DatHoaPhu #DatDaNang #68Property',angle:'vị trí và điều kiện sinh hoạt hằng ngày của gia đình'},
     ngoc:{name:'Ngọc Khương Brienz',place:'Hòa Khương',key:'NGỌC KHƯƠNG',tag:'#NgocKhuongBrienz #DatHoaKhuong #68Property',angle:'môi trường sống và đường kết nối đã kiểm chứng'}
   };
-  const audiences={home:{lead:'mua đất để ở, chuẩn bị xây nhà',need:'vị trí, công năng, đường đi và pháp lý'},saver:{lead:'chọn đất phù hợp khả năng tài chính',need:'tổng chi phí, mức giá thực tế và tiến độ thanh toán'},asset:{lead:'tìm đất để tích lũy lâu dài',need:'thông tin pháp lý, vị trí và tính phù hợp để nắm giữ'}};
-  const hello={warm:'Mình luôn nghĩ chọn đất nên bắt đầu từ nhu cầu thật, không chỉ từ một con số quảng cáo.',pro:'Mình ưu tiên gửi đủ thông tin đã kiểm tra để anh/chị có cơ sở so sánh trước khi lựa chọn.',short:'Mình gửi thông tin lô đất rõ ràng, gọn và đúng nhu cầu để anh/chị dễ xem.'};
+  const audiences={home:{lead:'mua đất để xây nhà',need:'vị trí, đường đi và giấy tờ'},saver:{lead:'tìm đất vừa ngân sách',need:'giá bán, các khoản phí và thời hạn thanh toán'},asset:{lead:'tìm đất để tích lũy lâu dài',need:'vị trí, giấy tờ và giá so sánh'}};
+  const hello={warm:'Em nghĩ chọn đất nên xem kỹ vị trí và số tiền mình dự tính trước ạ.',pro:'Em gửi thông tin đã kiểm tra để anh/chị tiện so sánh và cân nhắc.',short:'Em gửi nhanh thông tin chính của lô đang bán để anh/chị xem nhé.'};
   function val(id){return B(id).value.trim();}
   function buildPost(){
     const p=projects[val('builder-project')],a=audiences[val('builder-audience')],tone=val('builder-tone'),channel=val('builder-channel');
     const member=val('member-name'),lot=val('builder-lot'),area=val('builder-area'),price=val('builder-price'),fact=val('builder-fact');
     const intro=tone==='short'?`ĐANG TÌM ĐẤT ${p.name.toLocaleUpperCase('vi-VN')}?`:`ĐẤT ${p.name.toLocaleUpperCase('vi-VN')} – THÔNG TIN RÕ, CHỌN LÔ PHÙ HỢP`;
-    const lead=tone==='short'?`Anh/chị ${a.lead}?`: `Nếu anh/chị đang ${a.lead}, mình muốn giới thiệu một phương án ở khu vực ${p.place}.`;
+    const lead=tone==='short'?`Anh/chị ${a.lead}?`: `Nếu anh/chị đang ${a.lead}, em có một lựa chọn ở khu vực ${p.place} muốn gửi anh/chị tham khảo.`;
     const facts=[`📍 Khu vực: ${p.place}`,lot?`📌 Mã lô: ${lot}`:null,area?`📐 Diện tích: ${area}`:'📐 Diện tích: gửi theo mã lô đang còn',price?`💰 Giá đang giới thiệu: ${price}`:'💰 Giá: gửi bảng hàng cập nhật theo mã lô',fact?`✅ Điểm đáng chú ý: ${fact}`:null].filter(Boolean);
-    const promise=`Ưu tiên của mình là ${a.need}; riêng từng lô sẽ cần đối chiếu giấy tờ, giá và chính sách giao dịch trước khi quyết định.`;
+    const promise=`Khi xem đất, anh/chị nên kiểm tra ${a.need}. Em sẽ hỗ trợ gửi thông tin đã xác minh của đúng lô ạ.`;
     const sign=member?`${member} – 68 Property`:'68 Property';
     let result='';
-    if(channel==='group') result=[intro,lead,...facts,promise,`📩 Nhắn “${p.key}” để mình gửi lô phù hợp và thống nhất bước tiếp theo.`,`📞 0905 647 582 | ${sign}`,p.tag].join('\n\n');
-    else if(channel==='zalo') result=[`🏡 ${p.name} – ${p.place}`,lead,lot||area||price?facts.slice(1).join('\n'):'Mình có thể gửi danh sách lô đang còn và thông tin đã kiểm tra.',`Anh/chị muốn mình gửi vị trí và giá đúng lô không ạ? Nhắn “${p.key}” nhé.`,`📞 0905 647 582 – ${sign}`].join('\n\n');
-    else result=[`🏡 ${intro}`,hello[tone],lead,...facts,promise,`📩 Anh/chị nhắn “${p.key}” để mình gửi thông tin từng lô phù hợp; nếu cần, mình gọi lại để trao đổi kỹ hơn.`,`📞 0905 647 582 – ${sign}`,p.tag].join('\n\n');
+    if(channel==='group') result=[intro,lead,...facts,promise,`📩 Nhắn “${p.key}” để em gửi lô đang bán và thông tin cụ thể ạ.`,`📞 0905 647 582 | ${sign}`,p.tag].join('\n\n');
+    else if(channel==='zalo') result=[`🏡 ${p.name} – ${p.place}`,lead,lot||area||price?facts.slice(1).join('\n'):'Em gửi danh sách lô đang còn và thông tin đã kiểm tra nhé.',`Anh/chị muốn em gửi vị trí và giá của lô này không ạ? Nhắn “${p.key}” nhé.`,`📞 0905 647 582 – ${sign}`].join('\n\n');
+    else result=[`🏡 ${intro}`,hello[tone],lead,...facts,promise,`📩 Anh/chị nhắn “${p.key}” để em gửi đúng lô phù hợp; nếu cần, em gọi lại tư vấn kỹ hơn ạ.`,`📞 0905 647 582 – ${sign}`,p.tag].join('\n\n');
     B('generated-post').textContent=result;
-    B('builder-note').textContent=price?'Trước khi đăng: xác minh giá, mã lô, hiện trạng và pháp lý. Chỉ thêm chính sách vay/công chứng khi được duyệt.':'Giá đang để mở vì bạn chưa nhập giá đã duyệt. Có thể dùng bài giới thiệu, nhưng khi chào bán lô cụ thể nên bổ sung giá và thông tin xác minh.';
+    B('builder-note').textContent=price?'Đọc lại trước khi đăng: giá, mã lô, giấy tờ phải đúng bảng hàng. Chỉ nêu vay hoặc công chứng khi đã được xác nhận.':'Bạn chưa nhập giá. Hãy hỏi trưởng nhóm trước khi đăng tin bán lô cụ thể.';
   }
   B('generate-post').addEventListener('click',buildPost);
   B('reset-builder').addEventListener('click',()=>{for(const id of ['member-name','builder-lot','builder-area','builder-price','builder-fact'])B(id).value='';for(const id of ['builder-project','builder-audience','builder-tone','builder-channel'])B(id).selectedIndex=0;buildPost();});
